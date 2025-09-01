@@ -6,10 +6,11 @@ describe('MovieGridComponent', () => {
   let component: MovieGridComponent;
   let fixture: ComponentFixture<MovieGridComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [MovieGridComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [MovieGridComponent]
+    }).compileComponents();
+
     fixture = TestBed.createComponent(MovieGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
