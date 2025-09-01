@@ -1,0 +1,70 @@
+/* ==== Reset básico ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==== Botones Devi ==== */
+.devi-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.devi-btn:hover {
+  background: #f40612;
+}
+
+/* ==== Inputs ==== */
+.devi-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ==== List items (autocompletado) ==== */
+.devi-list-item {
+  padding: 0.6rem 1rem;
+  background: #1f1f1f;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.devi-list-item:hover {
+  background: #333;
+}
+
+/* ==== Modal ==== */
+.devi-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 1000;
+  box-shadow: 0 4px 20px

@@ -1,0 +1,16 @@
+<div class="search-bar">
+  <input
+    [formControl]="searchControl"
+    placeholder="Search your movie..."
+    class="devi-input"
+  />
+  <ul *ngIf="movies.length">
+    <li
+      *ngFor="let movie of movies"
+      (click)="selectMovie(movie)"
+      class="devi-list-item"
+    >
+      {{ movie.title }}
+    </li>
+  </ul>
+</div>

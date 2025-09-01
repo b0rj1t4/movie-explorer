@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 0.8rem;
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+    p {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 0.4rem 0 0;
+    }
+  }
+}

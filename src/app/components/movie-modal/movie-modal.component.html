@@ -1,0 +1,10 @@
+<div class="devi-modal" *ngIf="movie" @fadeInOut>
+  <h2>{{ movie.title }}</h2>
+  <img
+    [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path"
+    alt="{{ movie.title }}"
+  />
+  <p>{{ movie.overview }}</p>
+  <p>⭐ {{ movie.vote_average }}</p>
+  <button class="devi-btn" (click)="closeModal()">Cerrar</button>
+</div>

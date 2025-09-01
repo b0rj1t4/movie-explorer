@@ -1,0 +1,81 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.devi-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: scaleIn 0.3s ease;
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #222;
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.4;
+
+    &:first-of-type {
+      font-size: 0.95rem;
+    }
+
+    &:last-of-type {
+      font-weight: 600;
+      color: #ff9800;
+    }
+  }
+
+  .devi-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #ff5252;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      background: #e53935;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
