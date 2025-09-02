@@ -18,13 +18,18 @@ export class SearchComponent {
   searchControl = new FormControl('');
   movies: any[] = [];
   isLoading = false;
+  searchPerformed = false;
   @Output() movieSelected = new EventEmitter<Movie>();
   constructor() {
     console.log('SearchComponent initialized');
     this.searchControl.valueChanges
       .pipe(
         debounceTime(300),
-        switchMap((query) => this.movieService.searchMovies(query as string))
+        switchMap((query) => {
+          this.searchPerformed = !!query;
+          this.isLoading = true;
+          return this.movieService.searchMovies(query as string);
+        })
       )
       .subscribe((response: any) => {
         this.movies = response.results;

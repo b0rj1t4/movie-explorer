@@ -13,4 +13,7 @@
       {{ movie.title }}
     </li>
   </ul>
+  <div *ngIf="searchPerformed && !isLoading && !movies.length" class="no-results">
+    No movies found. Please try a different title.
+  </div>
 </div>
