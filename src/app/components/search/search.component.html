@@ -4,6 +4,9 @@
     placeholder="Search your movie..."
     class="devi-input"
   />
+  <div *ngIf="movies.length > 0" class="devi-counter">
+    {{ movies.length === 1 ? '1 movie found' : movies.length + ' movies found' }}
+  </div>
   <ul *ngIf="movies.length">
     <li
       *ngFor="let movie of movies"
