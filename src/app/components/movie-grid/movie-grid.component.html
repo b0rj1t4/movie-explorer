@@ -1,1 +1,17 @@
-<p>movie-grid works!</p>
+<div class="grid" *ngIf="movies.length > 0">
+  <div 
+    class="movie-card" 
+    *ngFor="let movie of movies"
+    (click)="selectMovie(movie)"
+  >
+    <img 
+      [src]="getImageUrl(movie.poster_path)" 
+      [alt]="movie.title"
+      loading="lazy"
+    />
+    <div class="info">
+      <h3>{{ movie.title }}</h3>
+      <p *ngIf="movie.vote_average">⭐ {{ movie.vote_average.toFixed(1) }}</p>
+    </div>
+  </div>
+</div>

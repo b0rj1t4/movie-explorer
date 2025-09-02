@@ -19,6 +19,8 @@ export class SearchComponent {
   movies: any[] = [];
   isLoading = false;
   @Output() movieSelected = new EventEmitter<Movie>();
+  @Output() searchResults = new EventEmitter<Movie[]>();
+
   constructor() {
     console.log('SearchComponent initialized');
     this.searchControl.valueChanges
@@ -28,6 +30,7 @@ export class SearchComponent {
       )
       .subscribe((response: any) => {
         this.movies = response.results;
+        this.searchResults.emit(this.movies);
         this.isLoading = false;
       });
   }
