@@ -16,7 +16,7 @@ export class SearchComponent {
   private movieService = inject(MovieService);
 
   searchControl = new FormControl('');
-  movies: any[] = [];
+  movies: Movie[] = [];
   isLoading = false;
   @Output() movieSelected = new EventEmitter<Movie>();
   constructor() {
